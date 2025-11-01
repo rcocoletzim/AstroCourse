@@ -4,30 +4,33 @@
   Puedes poner valores por defecto si quieres.
 */
 const {
-  datetime = "2022-11-11",
-  displayDate = "12th Nov 2025",
-  title = "How to center an element using JavaScript and jQuery con el Rubens",
-  url = "#",
-  tags = ["Snippet", "JavaScript", "C++"],
+	datetime = "2022-11-11",
+	displayDate = "12th Nov 2025",
+	title = "How to center an element using JavaScript and jQuery con el Rubens",
+	url = "#",
+	tags = ["Snippet", "JavaScript", "C++"],
 } = Astro.props;
 ---
 
 <article class="rounded-xl border border-gray-200 bg-white px-4 pt-12 pb-4">
-  <time datetime={datetime} class="block text-xs text-gray-500">
-    {displayDate}
-  </time>
+	<time datetime={datetime} class="block text-xs text-gray-500">
+		{displayDate}
+		< /time>
 
-  <a href={url}>
-    <h3 class="mt-0.5 text-lg font-medium text-gray-900">
-      {title}
-    </h3>
-  </a>
+		<a href={url}>
+			<h3 class="mt-0.5 text-lg font-medium text-gray-900">
+				{title}
+			</h3>
+		</a>
 
-  <div class="mt-4 flex flex-wrap gap-1">
-    {tags.map(tag => (
-      <span class="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs whitespace-nowrap text-purple-600">
-        {tag}
-      </span>
-    ))}
-  </div>
+		<div class="mt-4 flex flex-wrap gap-1">
+			{
+				tags.map((tag) => (
+					<span class="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs whitespace-nowrap text-purple-600">
+						{tag}
+					</span>
+				))
+			}
+		</div>
+	</time>
 </article>
